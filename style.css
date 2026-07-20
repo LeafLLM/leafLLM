@@ -33,20 +33,21 @@ html {
     font-family: "bodyfont", sans-serif;
     font-size: 2rem;
     color: #ffffff;
+    text-decoration: underline;
 }
 .main {
     display: flex;
     justify-content: space-between;
     max-width: 53.125rem;
     margin: auto;
-    padding: 20px;
+    padding: 1.25rem;
     align-items: flex-start;
     font-size : 1.5rem;
     font-family: "bodyfont", sans-serif;
 }
 
 .right-column {
-    width: 30%;
+    width: 25%;
     padding: 1.25rem;
 }
 
@@ -66,3 +67,52 @@ html {
     flex: 1;
     padding: 1.25rem;
 }
+
+.FAQ-Container{
+    position: relative;
+    margin-top: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: .5rem;
+    transition : 0.3s ease;
+}
+
+.FAQ-Container h3 {
+    text-decoration:underline;
+}
+
+.FAQ-section.active {
+    background-color: #ffffff
+}
+
+.FAQ-section.active .A {
+    max-height: 50px; 
+    opacity: 1;
+    margin: 1rem;
+}
+
+.FAQ-section.active .FAQ-button  {
+    transform: rotate(-90deg);
+}
+
+.Question-Wrapper {   
+   position:relative;
+}
+
+.FAQ-button {
+    position: absolute;
+    background: none;
+    right: 30px;
+    top: 0px;
+    border: 0;
+    transition: transform 0.35s ease;
+}
+
+.A {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin: 0;
+    transition: all 0.35s ease-in-out;
+}
+
