@@ -11,11 +11,11 @@ html {
     font-family: "bodyfont";
     src: url("fonts/Sophiecomic-Regular.ttf") format("truetype");
 }
-.body {
+body {
     
-    background-color: #f6f8ff;
+    background-color: #fefeff;
     font-family: "bodyfont", sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 .banner {
     text-align: center;
@@ -70,15 +70,17 @@ html {
 
 .FAQ-Container{
     position: relative;
-    margin-top: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 0;
+    border-radius: .3125rem;
     padding: .5rem;
     transition : 0.3s ease;
+    margin: auto;
+    max-width: 53.125rem;
+    text-align: center;
 }
 
-.FAQ-Container h3 {
-    text-decoration:underline;
+.FAQ-Container h2 {
+    font-size: 2rem;
 }
 
 .FAQ-section.active {
@@ -86,26 +88,38 @@ html {
 }
 
 .FAQ-section.active .A {
-    max-height: 50px; 
+    max-height: 150px; 
     opacity: 1;
     margin: 1rem;
 }
 
-.FAQ-section.active .FAQ-button  {
-    transform: rotate(-90deg);
-}
-
-.Question-Wrapper {   
-   position:relative;
-}
 
 .FAQ-button {
-    position: absolute;
-    background: none;
-    right: 30px;
-    top: 0px;
-    border: 0;
+    display:flex;
+    justify-content:space-between;
+    cursor:pointer;
+    background:none;
+    border: 1px solid #ccc;
+    border-radius: .3125rem;
+    font-family: inherit; 
+    font-size: 1.25rem;
+    width: 100%;
+    padding-right: .625rem;
+    padding-left: .625rem;
+    margin: 5px;
+}
+.FAQ-button i,
+.FAQ-button svg {
+    display: inline-block;
     transition: transform 0.35s ease;
+    position: relative;
+    top: 30px;
+    right: 30px;
+}
+
+.FAQ-section.active .FAQ-button i,
+.FAQ-section.active .FAQ-button svg {
+    transform: rotate(180deg);
 }
 
 .A {
@@ -116,3 +130,8 @@ html {
     transition: all 0.35s ease-in-out;
 }
 
+.showcase-container {
+    text-align: center;
+    margin:auto;
+    max-width: 53.125rem;
+}
