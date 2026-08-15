@@ -2,6 +2,7 @@
 <html lang="en">
 
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="home.css">
 <script src="https://kit.fontawesome.com/65950e9d60.js" crossorigin="anonymous"></script>
 <head>
     <meta charset="UTF-8">
@@ -10,70 +11,187 @@
     <script src="script.js" defer></script>
 </head>
 
-<body>
+<body class="home-page">
+         <nav>
+            <input type="checkbox" id="sidebar-active">
+                <label for="sidebar-active" class="sidebar-open">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <label id="overlay" for="sidebar-active"> </label>
+                <div class="links-container">
+                    <label for="sidebar-active" class="sidebar-close">
+                        <i class="fa-solid fa-x"></i>
+                    </label>
+                    <a class="homelink" href="index.html">Home</a>
+                    <a href="#showcase">Showcase</a>
+                    <a href="#FAQ">FAQ</a>
+                    <a href="Commissions.html">Commissions & TOS</a>
+                    <a href="gallery.html">Gallery</a>
+                </div>
+
+            </nav>
+    <section id="top">
         <header class="banner">
             <h1>LeafLLM</h1>
-            <p>Leah Mai Diaz</p>
+            <p>Leah Mai</p>
         </header>
+    </section>
     <div class = "main">
         <div class = "left-column">
             <h3>Welcome!</h3>
-            <p>This website is still a work in progress.</p>
             <h2>About Me</h2>
             <p>Hi! I'm Leaf! I'm a self taught digital artist. I love to draw cute things and occasionally animate. I'm also learning how to program. I've developed a passion for robotics, and I am a proud member of Team 3598!
             </p>
             <p>I built this website to get experience with web development, to showcase my artwork and share my journey as both an artist and a future engineer.</p>
+            <div class = "art-buttons">
+                <a href="gallery.html" class="art-button">Art Gallery</a>
+                <a href="Commissions.html" class="art-button">Commissions and Terms of Service</a>
+            </div>
         </div> 
 
         <div class = "right-column">
-            <img src="images/leafpagedoll.png" alt="placeholder image" class="leafart">
-            <!-- i need to redraw this image with my other fursona -->
-            <p> none of these links work yet except for home & gallery</p>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="Commissions.html">Commissions & TOS</a>
-                <a href="gallery.html">Gallery</a>
-            </nav>
+            <img src="images/banner.png" alt="banner artwork" class="leafart">
             <!-- for future reference i want to put all my contacts under here as little images :D-->
         </div>
     </div>
 
-    <div class="showcase-container">
-        <h2>Showcase</h2>
-        <p> It has been a year since I've immersed myself with STEM, I'm still exploring what being an engineer has to offer. I'd love to share my journey with you and showcase my work while on a team!</p>
-        <p> This part is still a work in progress.</p> 
-        <div class="Robotics and FIRST">
-                <h3>Robotics and FIRST</h3>
-                <p> Whoops!</p>
-            </div>
-            <div class="Solar Regatta">
-                <h3>Solar Regatta</h3>
-                <p> Whoops! </p>
-            </div>
-                
-
+    <div class="artcarousel">
+        <div class="art-group">
+            <div class="artcard">1</div>
+            <div class="artcard">2</div>
+            <div class="artcard">3</div>
+            <div class="artcard">4</div>
+            <div class="artcard">5</div>
+            <div class="artcard">6</div>
+            <div class="artcard">7</div>
+            <div class="artcard">8</div>
+        </div>
+        <div aria-hidden class="art-group">
+            <div class="artcard">1</div>
+            <div class="artcard">2</div>
+            <div class="artcard">3</div>
+            <div class="artcard">4</div>
+            <div class="artcard">5</div>
+            <div class="artcard">6</div>
+            <div class="artcard">7</div>
+            <div class="artcard">8</div>
+        </div> 
     </div>
 
+
+   <section id="showcase">
+
+  <div class="showcase-container">
+    <h2>Showcase</h2>
+    <p> Check out the stuff I've done! A year ago I picked up engineering for the fun of it. I've made significant progress and I look forward to turning this newfound passion into a career!</p>
+    
+    <div class="carousel-wrapper">
+      <button class="carousel-btn" id="prevBtn" aria-label="Previous card">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <div class="projects track" id="track">
+        <div class="card" id="card-1">
+            
+                    <h3>Robotics and <img src="images/assets/FIRST_Horz_RGB.png" alt="FIRST logo" class="FIRSTlogo"></h3> 
+                <div class="Robotics">
+                    <p> I am currently a member of Team 3598. I have been to 3 competitions so far. I joined the team last year and I've taken on various roles and responsibilities.</p>
+                    <img src="images/Robotics/3598stands.jpg" alt="Photo of Team 3598" class="standsphoto" width="385" height="175">
+                </div>
+                 <a href="robotics.html">Read More</a>
+           
+        </div>
+ 
+        <div class="card" id="card-2">
+          <div class="Solar-Regatta">
+            <h3>Solar Regatta</h3>
+            <h4> Hosted by <img src="images/assets/SMUD_logo.png" alt="SMUD logo" class="SMUDlogo"></h4>
+            <div class="regatta">
+            <p> The Junior class of The School of Engineering and Sciences won the Solar Regatta event. 
+                The team built a solar powered boat and competed against other teams in Rancho Seco. 
+                <span class="regatta-roles">Roles: Lead Artist, Commmunications Lead, Boat Driver, Spirit Contributor, Boat Design Contributor.</span>
+            </p>
+            <img src="images/Solar_Regatta/teamphoto.jpg" alt="Team photo" class="regattateamphoto" >
+            </div>
+            <a href="solar-regatta.html">Read More</a>
+          </div>
+        </div>
+   
+        <!-- 
+        <div class="card" id="card-3">
+          <h3>test</h3>
+        </div>
+         -->
+      </div>    
+       
+        
+
+      <button class="carousel-btn" id="nextBtn" aria-label="Next card">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <div class="track__indicators" aria-hidden="true">
+      <a href="#card-1" class="indicator"></a>
+      <a href="#card-2" class="indicator"></a>
+      <!--<a href="#card-3" class="indicator"></a>-->
+    </div>
+  </div>
+</section>
+
+    <section id="FAQ">
     <div class = "FAQ-Container">
             <h2>Frequently Asked Questions</h2>
-            <p>... that I get as an artist. </p>
+          <!--  <p>... that I get as an artist. </p> -->
             <div class = "FAQ-section">
             
                     <button class= "FAQ-button">
-                        <h4 class="Q"> Question 1 </h4> 
+                        <h4 class="Q"> What is your favorite medium? </h4> 
                         <i class="fas fa-chevron-down"></i>
                     </button>
-                <p class="A"> Answer </p>
+                <p class="A"> I prefer digital art because it's portable and I like having multiple layers. In most of my artworks I use over 5 layers.
+                     My rendered pieces still take anywhere from 3-6 hours to complete. I sometimes do traditional art but I don't have the time for it.
+                    <br> 
+                </p>
             </div>
             <div class = "FAQ-section">
                     <button class= "FAQ-button">
-                        <h4 class="Q"> Question 2 </h4> 
+                        <h4 class="Q"> What is your preferred drawing tool? </h4> 
                         <i class="fas fa-chevron-down"></i>
                     </button>
-                <p class="A">Check back later for this to be filled out :D</p>
+                <p class="A">I draw with an Apple Pencil. I have a 4th Generation 11-inch iPad. I also own an XPPen Artist 12 Line Friends tablet.</p>
+            </div>
+            <div class = "FAQ-section">
+            
+                    <button class= "FAQ-button">
+                        <h4 class="Q"> What drawing programs do you use? </h4> 
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                <p class="A"> I use Procreate and Clip Studio Paint for digital art. For animation I use Toonsquid. I like to use 11 FPS.</p>
+            </div>
+            <div class = "FAQ-section">
+            
+                    <button class= "FAQ-button">
+                        <h4 class="Q"> What got you into engineering?  </h4> 
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                <p class="A"> Well, I never thought I'd like math, science, or any of that until I was exposed to it. My school kept giving me small projects to work on until I reached my junior year, where I got serious about engineering.
+                    I found that I could use my art experience to make learning these subjects easier. It made ideas easier to communicate when I joined team 3598. So now I love engineering, I want this as my career.
+                </p>
             </div>
     </div>
+    </section>
+    <a class="to-top" href="#top">Back To Top</a>
 
 </body>
+
+<footer>
+    <div class="footer-content">
+        <p class="trademark-notice">
+            FIRST&reg; is a registered trademark of For Inspiration and Recognition of Science and Technology (FIRST). 
+            This is an independent personal portfolio and is not endorsed by, sponsored by, or affiliated with FIRST.
+        </p>
+    </div>
+</footer>
 
 </html>

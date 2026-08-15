@@ -1,3 +1,23 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root 
+{
+    --lavender: #eadcf1;
+    --purple-1: #9b50c8;
+    --purple-2: #7c4465;
+    --purple-3: #4c2351;
+    --brown-1: #4f3022;
+    --brown-2: #89614d;
+    --brown-3: #f2d0ba;
+    --brown-4: #FFF3DC;
+
+}
+
+
 html {
     scroll-behavior: smooth;
     font-size: 16px;
@@ -15,123 +35,108 @@ body {
     
     background-color: #fefeff;
     font-family: "bodyfont", sans-serif;
-    font-size: 1.5rem;
-}
-.banner {
-    text-align: center;
-    padding: 10px;
-    background-color: #9f68e8;
-}
-.banner h1 {
-    font-family: "headerfont", sans-serif;
-    letter-spacing: .25rem;
-    font-size: 2.5rem;
-    color: #ffffff;
-    -webkit-text-stroke: 1.5px rgb(0, 0, 0);
-}
-.banner p {
-    font-family: "bodyfont", sans-serif;
-    font-size: 2rem;
-    color: #ffffff;
-    text-decoration: underline;
-}
-.main {
-    display: flex;
-    justify-content: space-between;
-    max-width: 53.125rem;
-    margin: auto;
-    padding: 1.25rem;
-    align-items: flex-start;
-    font-size : 1.5rem;
-    font-family: "bodyfont", sans-serif;
-}
-
-.right-column {
-    width: 25%;
-    padding: 1.25rem;
-}
-
-.right-column nav {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-.right-column .leafart {
-    max-width: 13.25rem;
-    height: auto;
-    display: block;
-    margin: auto;
-}
-
-.left-column {
-    flex: 1;
-    padding: 1.25rem;
-}
-
-.FAQ-Container{
-    position: relative;
-    border: 0;
-    border-radius: .3125rem;
-    padding: .5rem;
-    transition : 0.3s ease;
-    margin: auto;
-    max-width: 53.125rem;
-    text-align: center;
-}
-
-.FAQ-Container h2 {
-    font-size: 2rem;
-}
-
-.FAQ-section.active {
-    background-color: #ffffff
-}
-
-.FAQ-section.active .A {
-    max-height: 150px; 
-    opacity: 1;
-    margin: 1rem;
-}
-
-
-.FAQ-button {
-    display:flex;
-    justify-content:space-between;
-    cursor:pointer;
-    background:none;
-    border: 1px solid #ccc;
-    border-radius: .3125rem;
-    font-family: inherit; 
     font-size: 1.25rem;
+}
+
+nav {
+    margin:0;
+    padding:0;
+    height: 3.75rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0.3125rem;
+    background-color: var(--purple-3);
+    
+}
+
+.links-container {
+    height: 100%;
     width: 100%;
-    padding-right: .625rem;
-    padding-left: .625rem;
-    margin: 5px;
-}
-.FAQ-button i,
-.FAQ-button svg {
-    display: inline-block;
-    transition: transform 0.35s ease;
-    position: relative;
-    top: 30px;
-    right: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    /* gap: 2rem; */
 }
 
-.FAQ-section.active .FAQ-button i,
-.FAQ-section.active .FAQ-button svg {
-    transform: rotate(180deg);
+nav a{
+    text-decoration: none;
+    color: var(--brown-4);
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    transition: ease 0.3s
+    
+}
+nav a:hover{
+    background-color: var(--purple-1);
 }
 
-.A {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    margin: 0;
-    transition: all 0.35s ease-in-out;
+nav svg {
+    color: var(--brown-4);
 }
 
-.showcase-container {
-    text-align: center;
-    margin:auto;
-    max-width: 53.125rem;
+#sidebar-active{
+    display:none;
+}
+
+.sidebar-open, .sidebar-close {
+    display:none;
+}
+
+@media(max-width: 530px) {
+
+    nav {
+        justify-content: flex-end;
+        padding-right: .5rem;
+    }
+
+    .links-container {
+        flex-direction: column;
+        
+    
+        align-items: flex-start; 
+
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 200px;
+        height: 100vh; 
+        background-color: var(--purple-3);
+        transition: ease-in-out 0.65s; 
+    }
+
+    .sidebar-close {
+        display: block;
+        padding: 1.5rem;
+        cursor: pointer;
+        color: var(--brown-4);
+    }
+
+    nav a {
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 1.5rem 2rem;
+        justify-content: flex-start; 
+    }
+
+    .sidebar-open {
+        display: block;
+        cursor: pointer;
+        color: var(--brown-4);
+    }
+
+    #sidebar-active:checked ~ .links-container {
+        right: 0;
+    }
+    #sidebar-active:checked ~ #overlay {
+        height: 100%;
+        width: 100%;
+        position:fixed;
+        top:0;
+        left:0;
+        z-index:9;
+    }
 }
