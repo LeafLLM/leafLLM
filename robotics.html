@@ -1,41 +1,251 @@
-<!DOCTYPE HTML> 
+<!DOCTYPE HTML>
 <html lang="en">
 
-<link rel="stylesheet" href="style.css">
-<script src="https://kit.fontawesome.com/65950e9d60.js" crossorigin="anonymous"></script>
 <head>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="robotpage.css?v=hero-header-20260912">
+
     <meta charset="UTF-8">
-    <title>Robotics</title>
+    <title>Robotics | LeafLLM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js" defer></script>
 </head>
 
-<body>
-    <nav>
-            <input type="checkbox" id="sidebar-active">
-                <label for="sidebar-active" class="sidebar-open">
-                    <i class="fa-solid fa-bars"></i>
-                </label>
-                <label id="overlay" for="sidebar-active"> </label>
-                <div class="links-container">
-                    <label for="sidebar-active" class="sidebar-close">
-                        <i class="fa-solid fa-x"></i>
-                    </label>
-                    <a class="homelink" href="index.html">Home</a>
-                    <a href="projects.html">Projects</a>
-                    <a href="index.html#FAQ">FAQ</a>
-                    <a href="Commissions.html">Commissions & TOS</a>
-                    <a href="gallery.html">Gallery</a>
+<body class="site-page robotics-site" id="top" data-nav-section="projects">
+    <div class="site-shell">
+        <div class="site-chrome">
+        <header class="hero-heading">
+            <h1 id="robotics-title">Robotics and <img src="images/assets/FIRST_HorzRGB_reverse.png" alt="FIRST logo" class="FIRSTlogo"></h1>
+            <p>Team 3598 • CAD • Programming</p>
+        </header>
+        <nav class="page-tabs" aria-label="Main navigation">
+            <div class="links-container">
+                <a class="page-tab homelink" href="index.html">Home</a>
+                <a class="page-tab" href="projects.html" aria-current="location">Projects</a>
+                <a class="page-tab" href="index.html#FAQ">FAQ</a>
+                <span class="page-tab" role="link" aria-disabled="true" title="This page is not available yet">Commissions &amp; TOS</span>
+                <a class="page-tab" href="gallery.html">Gallery</a>
+            </div>
+        </nav>
+        </div>
+    <main class="robotics-page">
+        <section class="hero" aria-labelledby="robotics-title">
+
+            <div class="hero-content">
+                <p class="placeholder-copy">[Introduce your journey with Team 3598 and what being part of the team means to you.]</p>
+            </div>
+        </section>
+
+        <div class="roles-photos">
+            <img class="roles-img" src="images/Robotics/robot-selfie.jpeg" alt="A selfie with the robot" loading="lazy" decoding="async">
+            <img class="roles-img" src="images/Robotics/xrp_programming_loop.gif" alt="Programming and testing an XRP robot" loading="lazy" decoding="async">
+            <img class="roles-img" src="images/Robotics/WorkingSafetyCaptain.JPG" alt="Working with the team as Safety Captain" loading="lazy" decoding="async">
+            <img class="roles-img" src="images/Robotics/team-bus.jpeg" alt="Traveling with the team" loading="lazy" decoding="async">
+        </div>
+
+        <div class="intro page-section roles-grid">
+            <section class="roles-panel" aria-labelledby="what-i-do">
+                <h2 id="what-i-do">Roles</h2>
+                <ul class="skills-list">
+                    <li>CAD</li>
+                    <li>Builder</li>
+                    <li>Programming</li>
+                    <li>Team Safety Captain</li>
+                </ul>
+            </section>
+            <section class="roles-panel competition-roles" aria-labelledby="competition-roles">
+                <h2 id="competition-roles">Competition Roles</h2>
+                <ul class="skills-list">
+                    <li>Pit Manager</li>
+                    <li>Robot Presenter</li>
+                </ul>
+            </section>
+        </div>
+
+
+        <section class="page-section" aria-labelledby="drivetrain-heading">
+            <h2 class="section-heading" id="drivetrain-heading">Spotlight</h2>
+            <article class="featured-project" id="drivetrain" aria-labelledby="drivetrain-title">
+                <h2 class="project-title" id="drivetrain-title">Drivetrain</h2>
+                <div class="drivetrain-layout">
+                    <img class="project-image featured-image cad-image" src="images/CAD/chassis-render.png" alt="CAD render of the robot chassis" loading="lazy" decoding="async">
+                    <div class="project-details">
+                        <div><h4>The challenge</h4><p class="placeholder-copy">[What did the drivetrain need to do? Add your goals and constraints.]</p></div>
+                        <div><h4>My contribution</h4><p class="placeholder-copy">[Describe your role, the decisions you made, and how you worked with the team.]</p></div>
+                        <div><h4>What I learned</h4><p class="placeholder-copy">[What did testing reveal? Explain what you changed and what you would try next.]</p></div>
+                    </div>
                 </div>
+                <section class="experience-section" aria-labelledby="experience">
+                    <h3 id="experience">Experience &amp; Lessons</h3>
+                    <div class="experience-content">
+                        <p class="placeholder-copy">[Tell the story of your experience: a challenge you faced, what you learned with the team, and how it changed the way you design.]</p>
+                        <div class="project-details">
+                            <div><h4>What I noticed</h4><p class="placeholder-copy">[What happened when the robot moved from the workbench to testing?]</p></div>
+                            <div><h4>What I learned</h4><p class="placeholder-copy">[Describe the feedback, failures, or discoveries that helped you grow.]</p></div>
+                            <div><h4>How my design changed</h4><p class="placeholder-copy">[Connect those lessons to the design decisions shown below.]</p></div>
+                        </div>
+                        <p class="evolution-bridge">[Explain how these experiences led to the design changes below.]</p>
+                            </div>
+                </section>
+            </article>
+        </section>
 
-            </nav>
+        <section class="page-section design-evolution" aria-labelledby="design-evolution">
+            <h2 class="section-heading" id="design-evolution">Design Evolution</h2>
+            <ol class="evolution-grid" role="list">
+                <li class="evolution-card">
+                    <span class="evolution-stage">Version 01</span>
+                    <h3>Initial Design</h3>
+                    <!-- Replace each placeholder with an img using class="project-image". -->
+                    <div class="image-placeholder">Initial design image</div>
+                    <p class="placeholder-copy">[Show your first concept and explain the idea behind it.]</p>
+                    <p class="evolution-note"><strong>Starting point:</strong> [What did you want to achieve?]</p>
+                </li>
+                <li class="evolution-card">
+                    <span class="evolution-stage">Version 02</span>
+                    <h3>Revisions</h3>
+                    <div class="image-placeholder">Revised design image</div>
+                    <p class="placeholder-copy">[Show what changed after testing or getting feedback.]</p>
+                    <p class="evolution-note"><strong>Key change:</strong> [What did you adjust, and why?]</p>
+                </li>
+                <li class="evolution-card">
+                    <span class="evolution-stage">Version 03</span>
+                    <h3>Refinements</h3>
+                    <div class="image-placeholder">Refined design image</div>
+                    <p class="placeholder-copy">[Show how further testing helped you improve the revised design.]</p>
+                    <p class="evolution-note"><strong>Fine-tuning:</strong> [What still needed work, and how did you improve it?]</p>
+                </li>
+                <li class="evolution-card">
+                    <span class="evolution-stage">Version 04</span>
+                    <h3>Final Version</h3>
+                    <div class="image-placeholder">Final design image</div>
+                    <p class="placeholder-copy">[Show the finished design and how it compares with your first concept.]</p>
+                    <p class="evolution-note"><strong>Result:</strong> [What improved, and what would you try next?]</p>
+                </li>
+            </ol>
+            <div class="evolution-testing">
+                <p class="section-description">Clips from the workshop and practice field.</p>
+                <!-- Keep complete figure blocks inside this grid when reordering or adding videos. -->
+                <div class="video-grid testing-grid">
+                    <figure class="video-card">
+                        <video controls playsinline preload="none" poster="images/Robotics/featured/testing/ball-test.jpg" aria-label="Ball-handling test">
+                            <source src="images/Robotics/featured/testing/ball-test.mp4" type="video/mp4">
+                            <a href="images/Robotics/featured/testing/ball-test.mp4">Watch ball-handling test</a>
+                        </video>
+                        <figcaption><strong>Ball-handling test</strong><span>[Describe the result and what you changed next.]</span></figcaption>
+                    </figure>
+                    <figure class="video-card">
+                        <video controls playsinline preload="none" poster="images/Robotics/featured/testing/trimmed-robotdrive.jpg" aria-label="Driving test">
+                            <source src="images/Robotics/featured/testing/trimmed-robotdrive.mp4" type="video/mp4">
+                            <a href="images/Robotics/featured/testing/trimmed-robotdrive.mp4">Watch driving test</a>
+                        </video>
+                        <figcaption><strong>Driving test</strong><span>[Add what the team tested and what you noticed.]</span></figcaption>
+                    </figure>
+                    <figure class="video-card">
+                        <video controls playsinline preload="none" poster="images/Robotics/featured/testing/robot-intake.jpg" aria-label="Intake test">
+                            <source src="images/Robotics/featured/testing/robot-intake.mp4" type="video/mp4">
+                            <a href="images/Robotics/featured/testing/robot-intake.mp4">Watch intake test</a>
+                        </video>
+                        <figcaption><strong>Intake test</strong><span>[Explain the adjustment and how the robot responded.]</span></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
 
-    <div class="hero">
-        <h2>Robotics and FIRST</h2>
-    
+
+
+        <section class="page-section" aria-labelledby="other-projects">
+            <h2 class="section-heading" id="other-projects">Other Projects</h2>
+            <div class="mechanism-projects">
+            <article class="featured-project" id="turret">
+                <p class="project-kicker">01 / Mechanism spotlight</p>
+                <h3>Turret</h3>
+                <p class="project-intro placeholder-copy">[Introduce the turret: what it needed to do, where it fits into the robot, and what you worked on.]</p>
+                <div class="video-grid">
+                    <figure class="video-card">
+                        <video controls playsinline preload="none" poster="images/Robotics/featured/turret/turret-test.jpg" aria-label="Turret / close-up test">
+                            <source src="images/Robotics/featured/turret/turret-test.mp4" type="video/mp4">
+                            <a href="images/Robotics/featured/turret/turret-test.mp4">Watch turret / close-up test</a>
+                        </video>
+                        <figcaption><strong>Turret / close-up test</strong><span>A closer look at the mechanism during testing.</span></figcaption>
+                    </figure>
+                    <figure class="video-card">
+                        <video controls playsinline preload="none" poster="images/Robotics/featured/turret/turret-test2.jpg" aria-label="Turret / bench test">
+                            <source src="images/Robotics/featured/turret/turret-test2.mp4" type="video/mp4">
+                            <a href="images/Robotics/featured/turret/turret-test2.mp4">Watch turret / bench test</a>
+                        </video>
+                        <figcaption><strong>Turret / bench test</strong><span>Testing the assembly together at the workbench.</span></figcaption>
+                    </figure>
+                </div>
+                <div class="project-details">
+                    <div><h4>The challenge</h4><p class="placeholder-copy">[What range of motion, accuracy, or packaging constraints shaped the turret?]</p></div>
+                    <div><h4>My contribution</h4><p class="placeholder-copy">[Describe your role, the decisions you made, and how you worked with the team.]</p></div>
+                    <div><h4>What I learned</h4><p class="placeholder-copy">[What did testing reveal? Explain what you changed and what you would try next.]</p></div>
+                </div>
+            </article>
+            <article class="featured-project" id="climber">
+                <p class="project-kicker">02 / Mechanism spotlight</p>
+                <h3>Climber</h3>
+                <figure class="climber-figure">
+                    <button class="climber-preview" type="button" aria-pressed="false" aria-label="Show extended climber" aria-describedby="climber-caption">
+                        <img class="climber-retracted" src="images/CAD/climber-retracted.png" width="2112" height="1146" alt="CAD render of the climber in its retracted position" loading="lazy" decoding="async">
+                        <img class="climber-extended" src="images/CAD/climber-extended.png" width="2112" height="1146" alt="CAD render of the climber in its extended position" loading="lazy" decoding="async" aria-hidden="true">
+                        <span class="climber-state" aria-hidden="true"><span class="state-retracted">Retracted</span><span class="state-extended">Extended</span></span>
+                    </button>
+                    <figcaption id="climber-caption">Hover to extend. Tap or press Enter to switch views.</figcaption>
+                </figure>
+                <p class="project-intro placeholder-copy">[Introduce the climber and explain how the mechanism moves between its retracted and extended positions.]</p>
+                <div class="project-details">
+                    <div><h4>The challenge</h4><p class="placeholder-copy">[What reach, load, and space requirements did the climber need to meet?]</p></div>
+                    <div><h4>My contribution</h4><p class="placeholder-copy">[Describe your role, the decisions you made, and how you worked with the team.]</p></div>
+                    <div><h4>What I learned</h4><p class="placeholder-copy">[What did testing reveal? Explain what you changed and what you would try next.]</p></div>
+                </div>
+                <div class="video-grid single-video">
+                    <figure class="video-card">
+                        <video controls playsinline preload="none" poster="images/Robotics/featured/climber/climber.jpg" aria-label="Climber / robot test">
+                            <source src="images/Robotics/featured/climber/climber.mp4" type="video/mp4">
+                            <a href="images/Robotics/featured/climber/climber.mp4">Watch climber / robot test</a>
+                        </video>
+                        <figcaption><strong>Climber / robot test</strong><span>The climbing mechanism being tested on the robot.</span></figcaption>
+                    </figure>
+                    <div class="test-notes"><h4>From CAD to the robot</h4><p class="placeholder-copy">[Describe what you were checking in this video, what happened, and how the result informed the next iteration.]</p></div>
+                </div>
+            </article>
+            </div>
+            <article class="project-row">
+                <div class="image-placeholder">XRP photo</div>
+                <div>
+                    <h3>XRP Robot</h3>
+                    <p class="placeholder-copy">[Describe your XRP project, your contribution, and what you explored.]</p>
+                </div>
+            </article>
+            <article class="project-row">
+                <div>
+                    <h3>CAD Project</h3>
+                    <p class="placeholder-copy">[Introduce another CAD project and explain what you designed.]</p>
+                </div>
+                <div class="image-placeholder">CAD photo</div>
+            </article>
+        </section>
+
+        <section class="page-section beyond-section" aria-labelledby="beyond-the-robot">
+            <h2 class="section-heading" id="beyond-the-robot">Beyond the Robot</h2>
+            <p class="section-description">The people, memories, and moments that make the team.</p>
+            <!-- Add a photo by copying a figure below. Replace the img src, alt, and figcaption. -->
+            <div class="image-grid beyond-grid">
+                <figure><img src="images\Robotics\safetyallstar.jpeg" alt="Safety All Star Award" loading="lazy" decoding="async"><figcaption>Safety All Star Award</figcaption></figure>
+                <figure><img src="images\Robotics\impactaward.jpg" alt="A plush companion with the robot" loading="lazy" decoding="async"><figcaption>Impact Award at Sacramento District Event!!</figcaption></figure>
+                <figure><img src="images/Robotics/qualityaward.jpeg" alt="Team 3598 gathered at an event" loading="lazy" decoding="async"><figcaption>Quality Award at Half Moon Bay!!</figcaption></figure>
+                <figure><img src="images/Robotics/robot-plush.jpeg" alt="A plush companion with the robot" loading="lazy" decoding="async"><figcaption>most important subsystem</figcaption></figure>
+                <figure><img src="images\Robotics\messedupstands.jpeg" alt="3598 in the stands" loading="lazy" decoding="async"><figcaption>"3598" supposedly</figcaption></figure>
+                <figure><img src="images\Robotics\brokenonfield.jpeg" alt="broken robot" loading="lazy" decoding="async"><figcaption>said "quality award"...</figcaption></figure>
+            </div>
+        </section>
+
+    </main>
+        <footer>
+            <a class="to-top" href="#top">Back To Top</a>
+        </footer>
     </div>
 </body>
-
-
-
 </html>
