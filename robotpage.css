@@ -1,48 +1,57 @@
-/* A restrained project layout with the homepage palette and solid shadows. */
+/* Page-local typography follows the homepage scale. */
 .robotics-page {
-    --panel-shadow: 6px 6px 0 var(--lavender);
+    --panel-shadow: 5px 5px 0 var(--lavender);
     width: min(calc(100% - 3rem), 1100px);
     margin: 0 auto;
-    padding: 2rem 0 5rem;
+    padding: 2rem 0 4rem;
     color: var(--purple-3);
-    font-family: "bodyfont", system-ui, sans-serif;
-    font-size: clamp(1.15rem, 2vw, 1.4rem);
-    line-height: 1.6;
+    font: 1.25rem/1.6 "bodyfont", system-ui, sans-serif;
+    overflow-wrap: break-word;
 }
 
-.robotics-page :is(h1, h2, h3) {
+.robotics-page :is(h2, h3) {
     font-family: "headerfont", system-ui, sans-serif;
     font-weight: 400;
-    line-height: 1.15;
-    letter-spacing: 0.015em;
-    overflow-wrap: anywhere;
+    line-height: 1.25;
+    letter-spacing: .015em;
+}
+
+.robotics-page h2 {
+    font-size: 1.85rem;
 }
 
 .robotics-page h3 {
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-size: 1.5rem;
 }
 
 .robotics-page h4 {
-    font-size: 1.35rem;
-    line-height: 1.3;
+    font-size: 1.25rem;
+    line-height: 1.4;
 }
 
-/* Photo hero: centered text over a dark overlay, matching the reference. */
+.robotics-page p {
+    max-width: 65ch;
+}
+
+.robotics-page :is(h3, h4) {
+    margin-bottom: .65rem;
+}
+
+.robotics-page :is(article, section, figure, .project-details > div) {
+    min-width: 0;
+}
+
+/* Preserve the team photo header. */
 .robotics-site .hero-heading {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: clamp(24rem, 48vw, 36rem);
+    min-height: clamp(20rem, 30vw, 24rem);
     padding: 3rem 1.5rem;
     border-radius: 22px 22px 0 0;
+    background: linear-gradient(rgba(20,15,24,.62), rgba(20,15,24,.62)), url("images/Robotics/impactaward.jpg") center / cover;
     background-color: var(--purple-3);
-    background-image:
-        linear-gradient(rgba(20, 15, 24, 0.62), rgba(20, 15, 24, 0.62)),
-        url("images/Robotics/impactaward.jpg");
-    background-size: cover;
-    background-position: center 55%; 
-    background-repeat: no-repeat;
     color: white;
     text-align: center;
 }
@@ -52,10 +61,14 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 0.3em;
+    gap: .3em;
     color: white;
-    font-size: clamp(2rem, 5.5vw, 4.2rem);
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    font-family: "headerfont", system-ui, sans-serif;
+    font-size: clamp(2.65rem, 6vw, 4rem);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: .015em;
+    text-shadow: 0 2px 8px #0005;
 }
 
 .robotics-site .FIRSTlogo {
@@ -67,346 +80,115 @@
 }
 
 .robotics-site .hero-heading p {
-    max-width: 100%;
     margin: 1.25rem auto 0;
-    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
-    font-weight: 400;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    font-size: 1.25rem;
+    text-shadow: 0 1px 4px #0008;
 }
 
-.robotics-page .project-row {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    align-items: center;
-    gap: clamp(1.25rem, 3vw, 2.5rem);
+.robotics-site .page-tabs {
+    padding-top: .85rem;
 }
 
-.robotics-page :is(.hero-content, .featured-project, .project-row, .reflection) {
-    padding: clamp(1.25rem, 3vw, 2.5rem);
-    border: 2px solid var(--lavender);
-    border-radius: 1rem;
-    background: white;
-    box-shadow: var(--panel-shadow);
+.robotics-site .page-tabs .page-tab::before {
+    display: none;
 }
 
-.robotics-page .hero-content {
-    margin-top: 0;
-}
-
-.robotics-page .hero-content > p {
-   /*  padding-left: 1rem;
-    border-left: 3px solid var(--purple-1); */
-    max-width: 48rem;
-    margin: 0 auto;
-    text-align: center;
+.robotics-site footer {
+    background: var(--periwinkle);
 }
 
 .robotics-page .page-section {
-    margin-top: clamp(3rem, 6vw, 3.5rem);
+    margin-top: 3rem;
 }
 
 .robotics-page .section-heading {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: clamp(0.5rem, 2vw, 1.25rem);
-    margin-bottom: 2rem;
+    gap: .75rem;
+    margin-bottom: 1.5rem;
     text-align: center;
-    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
 }
 
-.robotics-page .section-heading::before,
-.robotics-page .section-heading::after {
+.robotics-page .section-heading::before, .robotics-page .section-heading::after {
     content: "";
-    flex: 1 0 1rem;
-    max-width: 5rem;
-    height: 2px;
-    border-radius: 999px;
-    background: var(--lavender);
+    flex: 1 0 .75rem;
+    max-width: 4rem;
+    height: 3px;
+    background: var(--purple-2);
 }
 
-.robotics-page .roles-photos {
-    margin:3rem 0 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: .5rem;
-}
-
-.robotics-page .roles-img {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    border-radius: 0.25rem;
-    display: block;
-}
-
-/* Group team responsibilities and competition duties into compact panels. */
-.robotics-page .roles-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-    gap: 1.5rem;
-}
-
-.robotics-page .roles-panel {
-    min-width: 0;
-    padding: clamp(1.25rem, 2.5vw, 2rem);
+.robotics-page :is(.overview-panel, .featured-project, .project-row, .reflection, .roles-panel) {
+    padding: clamp(1rem, 3vw, 2rem);
     border: 2px solid var(--lavender);
-    border-top: 4px solid var(--purple-3);
-    border-radius: .5rem;
+    border-radius: 1rem;
     background: white;
     box-shadow: var(--panel-shadow);
 }
 
-.robotics-page .roles-panel h2 {
-    margin-bottom: 1.5rem;
-    font-size: clamp(1.5rem, 2.5vw, 1.9rem);
-}
-
-.robotics-page .competition-roles {
-    border-top-color: var(--purple-1);
-   /* background: var(--brown-4);*/
-}
-
-/* Static role labels with enough room for longer titles. */
-.robotics-page .skills-list {
+.robotics-page :is(.overview-grid, .roles-grid, .project-row, .drivetrain-layout) {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-    margin: 0;
-    list-style: none;
-    text-align: left;
-}
-
-.robotics-page .skills-list li {
-    display: flex;
-    align-items: center;
-    min-height: 4rem;
-    padding: 0.75rem 1rem;
-    border: 2px solid var(--purple-3);
-    border-radius: 0.5rem;
-    background: var(--purple-3);
-    color: var(--brown-4);
-    box-shadow: 5px 5px 0 var(--lavender);
-    font-size: 1.2rem;
-    font-weight: 700;
-    line-height: 1.4;
-    overflow-wrap: anywhere;
-}
-
-.robotics-page .skills-list li:nth-child(even) {
-    background: var(--brown-4);
-    color: var(--purple-3);
-}
-
-.robotics-page .competition-roles .skills-list {
-    grid-template-columns: 1fr;
-}
-
-/* Neutral placeholders reserve space for your own images. */
-.robotics-page .image-placeholder {
-    display: grid;
-    place-items: center;
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    padding: 1rem;
-    border: 1px dashed var(--purple-2);
-    border-radius: 0.5rem;
-    background-color: #f7f1fa;
-    text-align: center;
-    font-weight: 700;
-}
-
-/* Replace a placeholder with an img using class="project-image". */
-.robotics-page .project-image {
-    display: block;
-    width: 100%;
-    height: auto;
-    border: 2px solid var(--lavender);
-    border-radius: 1rem;
-}
-
-.robotics-page .featured-project {
-    border-top: 4px solid var(--purple-1);
-}
-
-.robotics-page .featured-project + .featured-project { margin-top: 2.5rem; }
-.robotics-page .mechanism-projects + .project-row { margin-top: 2rem; }
-.robotics-page .mechanism-projects {
-    display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-    align-items: stretch;
     gap: 1.5rem;
+    align-items: start;
 }
-.robotics-page .mechanism-projects .featured-project {
-    min-width: 0;
-    margin-top: 0;
-    padding: clamp(1.25rem, 2.5vw, 2rem);
-    font-size: 1.1rem;
+
+.robotics-page .overview-grid {
+    margin-top: 1.5rem;
 }
-.robotics-page .mechanism-projects .project-details,
-.robotics-page .mechanism-projects .video-grid { grid-template-columns: 1fr; }
-.robotics-page .mechanism-projects .project-details { gap: 1rem; }
-.robotics-page .mechanism-projects .project-details > div { padding: 1rem; }
-.robotics-page .mechanism-projects h4 { font-size: 1.2rem; }
-.robotics-page .mechanism-projects .climber-preview { aspect-ratio: 4 / 3; }
-.robotics-page .mechanism-projects .climber-preview img {
-    width: 140%;
-    height: auto;
-    left: -20%;
-    top: auto;
-    bottom: 0;
-}
-.robotics-page .project-kicker {
-    margin-bottom: .6rem;
-    color: var(--purple-2);
-    font-size: 2rem;
-    letter-spacing: .04em;
-}
-.robotics-page .project-intro { max-width: 52rem; margin: 1.5rem 0; }
-.robotics-page .project-title {
-    margin: 0 0 1rem;
-    color: var(--purple-3);
-    font-size: clamp(2rem, 4vw, 2.8rem);
-    line-height: 1.2;
-    letter-spacing: 0;
-    text-align: left;
-}
-.robotics-page #drivetrain .experience-section {
-    margin-top: clamp(2rem, 4vw, 3rem);
-    padding-top: clamp(1.5rem, 3vw, 2rem);
-    border-top: 2px solid var(--lavender);
-}
-.robotics-page .experience-section > h3 {
-    margin-bottom: 1rem;
-    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-}
+
 .robotics-page .project-jump-links {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: .75rem;
-    margin: -.5rem 0 2rem;
-    margin-bottom: 2rem;
+    gap: .6rem;
+    margin: 0 0 1.75rem;
 }
+
 .robotics-page .project-jump-links a {
-    padding: .4rem 1.2rem;
-    border: 1px solid var(--lavender);
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: .4rem .85rem;
+    border: 1px solid var(--line);
     border-radius: 999px;
-    color: var(--purple-3);
-    background: #faf7fc;
+    background: var(--paper);
+    font-size: 1.05rem;
+    line-height: 1.4;
     text-decoration: none;
-    font-size: 1.1rem;
 }
-.robotics-page .project-jump-links a:hover { background: var(--lavender); }
-.robotics-page .cad-image { max-height: 32rem; object-fit: contain; background: #eee; }
-.robotics-page .drivetrain-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-    align-items: start;
-    gap: clamp(1.25rem, 3vw, 2rem);
+
+.robotics-page .project-jump-links a:is(:hover, :focus-visible) {
+    background: var(--lavender);
 }
-.robotics-page .drivetrain-layout .project-details {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    margin-top: 0;
+
+.robotics-page .placeholder-copy {
+    color: var(--purple-3);
 }
-.robotics-page .drivetrain-layout .cad-image {
-    aspect-ratio: 4 / 3;
-    align-self: center;
+
+.robotics-page .extranotes {
+    color: var(--purple-3);
+    grid-column: 1 / -1;
+    text-align: center;
 }
-.robotics-page .video-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.25rem;
+
+.robotics-page .extranotes p {
+    margin-inline: auto;
+}
+
+.robotics-page :is(.section-description, .section-notes) {
+    margin-bottom: 1.5rem;
+}
+
+.robotics-page .section-notes {
     margin-top: 1.5rem;
 }
-.robotics-page .video-card {
-    min-width: 0;
-    overflow: hidden;
-    border: 1px solid var(--lavender);
-    border-radius: .75rem;
-    background: #faf7fc;
-}
-.robotics-page .video-card video {
-    display: block;
-    width: 100%;
-    aspect-ratio: 16 / 10;
-    object-fit: contain;
-    background: #201c24;
-}
-.robotics-page .video-card figcaption { padding: 1rem 1.15rem; font-size: 1.05rem; line-height: 1.5; }
-.robotics-page .video-card figcaption strong { display: block; margin-bottom: .35rem; }
-.robotics-page .video-card figcaption span { color: #65506b; }
-.robotics-page .test-notes { align-self: center; padding: 1rem; }
-.robotics-page .test-notes h4 { margin-bottom: .75rem; }
-.robotics-page .testing-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.robotics-page .subsection-heading { margin: 2.5rem 0 .75rem; }
-.robotics-page .section-description { color: #65506b; margin-bottom: 1.5rem; }
-.robotics-page .evolution-bridge { margin: 2rem 0 .75rem; }
-.robotics-page .evolution-testing { margin-top: 2rem; }
-.robotics-page .climber-preview {
-    display: block;
-    position: relative;
-    width: 100%;
-    aspect-ratio: 2112 / 1146;
-    overflow: hidden;
-    border: 1px solid var(--lavender);
-    border-radius: .75rem;
-    background: transparent;
-    cursor: pointer;
-}
-.robotics-page .climber-preview img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transform-origin: 50% 100%;
-    transition: opacity .35s ease;
-}
-/* Match the stationary lower tube across the two differently framed CAD renders. */
-.robotics-page .climber-retracted { transform: scale(.82); }
-.robotics-page .climber-extended { transform: translate(1.7%, -4.5%) scale(.97); opacity: 0; }
-.robotics-page .climber-preview.is-extended .climber-extended { opacity: 1; }
-.robotics-page .climber-preview.is-extended .climber-retracted { opacity: 0; }
-.robotics-page .climber-state {
-    position: absolute;
-    left: 1rem;
-    bottom: 1rem;
-    padding: .4rem .85rem;
-    border-radius: 999px;
-    background: var(--brown-4);
-    color: var(--purple-3);
-    font: 1rem "bodyfont", sans-serif;
-}
-.robotics-page .state-extended,
-.robotics-page .is-extended .state-retracted { display: none; }
-.robotics-page .is-extended .state-extended { display: inline; }
-.robotics-page .climber-figure > figcaption { margin-top: .65rem; font-size: 1rem; color: #65506b; }
-.robotics-page .beyond-section > p { text-align: center; }
-.robotics-page .beyond-grid img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: .4rem; }
 
-.robotics-page :is(.featured-project > h3, .project-row h3, .project-details h4) {
-    margin-bottom: 1rem;
-}
-
-.robotics-page .featured-image {
-    aspect-ratio: 16 / 9;
-}
-
-.robotics-page :is(.project-details, .image-grid, .evolution-grid) {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.5rem;
-}
-
-.robotics-page .project-details {
-    margin-top: 2rem;
-}
-
-/* Side-by-side versions make the design changes easy to compare. */
+/* Each iteration is independent: any count wraps into available space. */
 .robotics-page .evolution-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+    gap: 1.5rem;
     list-style: none;
 }
 
@@ -418,159 +200,388 @@
     padding: 1.25rem;
     border: 2px solid var(--lavender);
     border-top: 4px solid var(--purple-2);
-    border-radius: 0.75rem;
+    border-radius: .75rem;
     background: white;
     box-shadow: var(--panel-shadow);
 }
 
-.robotics-page .evolution-stage {
-    align-self: flex-start;
-    padding: 0.2rem 0.65rem;
-    border-radius: 0.25rem;
-    background: var(--lavender);
-    font-size: 1rem;
-    font-weight: 700;
-}
-
 .robotics-page .evolution-card h3 {
-    font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+    margin: 0;
 }
 
 .robotics-page .evolution-note {
-    margin-top: auto;
-    padding-top: 1rem;
+    padding-top: .75rem;
     border-top: 1px solid var(--lavender);
-    font-size: 1.1rem;
+}
+
+.robotics-page .evolution-testing {
+    margin-top: 2rem;
+}
+
+.robotics-page .image-placeholder {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    padding: 1rem;
+    border: 1px dashed var(--purple-2);
+    border-radius: .5rem;
+    background: var(--paper);
+    text-align: center;
+}
+
+/* Optional details sit in full-width mechanism cards. */
+.robotics-page .mechanism-projects {
+    display: grid;
+    gap: 2rem;
+}
+
+.robotics-page .featured-project {
+    border-top: 4px solid var(--purple-1);
+}
+
+.robotics-page .project-title {
+    margin: 0 0 1rem;
+}
+
+.robotics-page .project-kicker {
+    margin-bottom: .5rem;
+    font-size: 1rem;
+}
+
+.robotics-page .project-intro {
+    margin: 1.25rem 0;
+}
+
+.robotics-page .project-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
 }
 
 .robotics-page .project-details > div {
-    padding: 1.25rem;
-    border-top: 4px solid var(--lavender);
-    border-radius: 0.75rem;
-    background: #faf7fc;
+    padding-top: 1rem;
+    border-top: 2px solid var(--lavender);
 }
 
-.robotics-page .placeholder-copy {
-    color: #65506b;
+.robotics-page .drivetrain-layout {
+    margin-top: 1rem;
+    align-items: center;
 }
 
-.robotics-page .process-heading {
-    width: fit-content;
-    max-width: 100%;
-    margin: 3rem auto 1.5rem;
-    padding: 0.5rem 1.25rem;
-    border: 2px solid var(--purple-3);
-    border-radius: 0.5rem;
+.robotics-page .drivetrain-layout .project-details {
+    grid-template-columns: 1fr;
+    margin-top: 0;
+}
+
+.robotics-page .project-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: .75rem;
+}
+
+.robotics-page .cad-image {
+    aspect-ratio: 4 / 3;
+    max-height: 28rem;
+    object-fit: contain;
+    background: var(--paper);
+}
+
+.robotics-page .project-heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .75rem;
+    margin-bottom: 1rem;
+}
+
+.robotics-page .project-heading .project-title {
+    margin: 0;
+}
+
+.robotics-page .project-status {
+    padding: .25rem .75rem;
+    border: 1px solid var(--purple-2);
+    border-radius: 999px;
     background: var(--brown-4);
-    text-align: center;
+    font-size: 1rem;
 }
 
-.robotics-page .process-heading span {
-    margin: 0 0.35rem;
-    color: var(--purple-2);
+.robotics-page .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    list-style: none;
+    margin-bottom: 1rem;
 }
 
-.robotics-page .image-grid figure {
-    min-width: 0;
-    padding: 0.75rem;
-    border: 2px solid var(--lavender);
-    border-radius: 0.75rem;
-    background: white;
-    box-shadow: 4px 4px 0 var(--lavender);
+.robotics-page .project-tags:empty {
+    display: none;
 }
 
-.robotics-page .image-grid figcaption {
-    padding: 0.75rem 0 0.25rem;
-    text-align: center;
+.robotics-page .project-tags li {
+    padding: .15rem .65rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--periwinkle);
+    font-size: .95rem;
+}
+
+.robotics-page .work-log {
+    margin-top: 1.5rem;
+    border-top: 2px solid var(--lavender);
+}
+
+.robotics-page .work-log summary {
+    padding: .75rem 0;
+    cursor: pointer;
     font-weight: 700;
 }
 
-.robotics-page .beyond-grid figure {
-    padding: 0;
-    border: 0;
-    border-radius: 0;
-    background: transparent;
-    box-shadow: none;
+.robotics-page .work-log summary:focus-visible {
+    outline: 3px solid var(--purple-1);
+    outline-offset: 3px;
 }
 
-.robotics-page .beyond-grid figcaption {
-    padding: .65rem 0 0;
-    color: #65506b;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: left;
-}
-
-.robotics-page .project-row {
-    border-left: 4px solid var(--purple-1);
+.robotics-page .work-log .project-details {
+    margin-top: .5rem;
 }
 
 .robotics-page .project-row + .project-row {
-    margin-top: 2rem;
-    border-left-color: var(--purple-2);
+    margin-top: 1.5rem;
 }
 
+.robotics-page .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
 
+.robotics-page .testing-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
 
-/* Two readable columns keep the design history inside the shared page frame. */
+.robotics-page .video-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--lavender);
+    border-radius: .75rem;
+    background: var(--paper);
+}
 
-/* Shorter desktop banner; anchor the photo at the top to crop its bottom. */
-@media (min-width: 769px) {
-    .robotics-site .hero-heading {
-        min-height: clamp(20rem, 30vw, 24rem);
-        background-position: center;
-    }
+.robotics-page .video-card video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: contain;
+    background: #201c24;
+}
+
+.robotics-page .video-card figcaption {
+    padding: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.robotics-page .video-card figcaption strong {
+    display: block;
+    margin-bottom: .4rem;
+}
+
+.robotics-page .test-notes {
+    align-self: center;
+}
+
+/* Keep the calibrated crossfade and the existing keyboard/touch controls. */
+.robotics-page .climber-preview {
+    display: block;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 2112 / 1146;
+    overflow: hidden;
+    border: 1px solid var(--lavender);
+    border-radius: .75rem;
+    background: transparent;
+    cursor: pointer;
+}
+
+.robotics-page .climber-preview img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform-origin: 50% 100%;
+    transition: opacity .35s ease;
+}
+
+.robotics-page .climber-retracted {
+    transform: scale(.82);
+}
+
+.robotics-page .climber-extended {
+    transform: translate(1.7%, -4.5%) scale(.97);
+    opacity: 0;
+}
+
+.robotics-page .climber-preview.is-extended .climber-extended {
+    opacity: 1;
+}
+
+.robotics-page .climber-preview.is-extended .climber-retracted {
+    opacity: 0;
+}
+
+.robotics-page .climber-state {
+    position: absolute;
+    left: .75rem;
+    bottom: .75rem;
+    padding: .3rem .75rem;
+    border-radius: 999px;
+    background: var(--brown-4);
+    color: var(--purple-3);
+    font: 1rem "bodyfont", sans-serif;
+}
+
+.robotics-page .state-extended, .robotics-page .is-extended .state-retracted {
+    display: none;
+}
+
+.robotics-page .is-extended .state-extended {
+    display: inline;
+}
+
+.robotics-page .climber-figure > figcaption {
+    margin-top: .65rem;
+    font-size: 1.1rem;
+}
+
+.robotics-page .roles-grid {
+    grid-template-columns: 1fr;
+}
+
+.robotics-page .roles-panel {
+    border-top: 4px solid var(--purple-3);
+}
+
+.robotics-page .competition-roles {
+    border-top-color: var(--purple-1);
+}
+
+.robotics-page .roles-panel h3 {
+    margin-bottom: 1rem;
+}
+
+.robotics-page .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    list-style: none;
+}
+
+.robotics-page .skills-list li {
+    padding: .6rem .85rem;
+    border-radius: .5rem;
+    background: var(--purple-3);
+    color: var(--brown-4);
+    box-shadow: 3px 3px 0 var(--lavender);
+    font-size: 1.15rem;
+}
+
+.robotics-page .skills-list li:nth-child(even) {
+    background: var(--brown-4);
+    color: var(--purple-3);
+}
+
+.robotics-page .roles-photos {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: .75rem;
+}
+
+.robotics-page .roles-img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: .4rem;
+}
+
+.robotics-page .beyond-grid {
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.robotics-page .beyond-grid img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    background: var(--paper);
+    border-radius: .4rem;
+}
+
+.robotics-page .beyond-grid figcaption {
+    padding-top: .65rem;
+    font-size: 1.1rem;
 }
 
 @media (max-width: 768px) {
-    .robotics-page .drivetrain-layout { grid-template-columns: 1fr; }
-    .robotics-page .mechanism-projects { grid-template-columns: 1fr; }
-    .robotics-page .video-grid { grid-template-columns: 1fr; }
-    .robotics-page .roles-photos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
+    .robotics-page .testing-grid {
+        grid-template-columns: 1fr;
+    }
+
     .robotics-page {
         width: calc(100% - 2rem);
         padding-top: 1rem;
     }
 
-    .robotics-page :is(.project-row, .project-details, .image-grid, .evolution-grid) {
+    .robotics-page :is(.overview-grid, .roles-grid, .project-row, .drivetrain-layout) {
         grid-template-columns: 1fr;
     }
 
-    .robotics-page .roles-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .robotics-page .project-row {
-        border-left-width: 2px;
-        border-left-color: var(--lavender);
-        border-top: 4px solid var(--purple-1);
-    }
-
-    .robotics-page .project-row + .project-row {
-        border-left-color: var(--lavender);
-        border-top-color: var(--purple-2);
+    .robotics-page .roles-photos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
-@media (max-width: 480px) {
-    .robotics-page .skills-list {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-@media (max-width: 480px) {
-    .robotics-page .mechanism-projects .climber-preview { aspect-ratio: 1; }
-    .robotics-page .mechanism-projects .climber-preview img { width: 185%; height: auto; left: -42.5%; top: auto; bottom: 0; }
-}
-
-/* A photo header and plain tabs keep the Robotics page focused on the work. */
-.robotics-site .hero-heading h1 { font-family: "headerfont", system-ui, sans-serif; font-weight: 400; line-height: 1.15; letter-spacing: .015em; }
-.robotics-site .page-tabs { padding-top: .85rem; }
-.robotics-site .page-tabs .page-tab::before { display: none; }
-.robotics-site footer { background: var(--periwinkle); }
 @media (max-width: 700px) {
-    .robotics-site .hero-heading { border-radius: 16px 16px 0 0; }
-    .robotics-site .page-tabs { padding-top: .7rem; }
+    .robotics-site .hero-heading {
+        border-radius: 16px 16px 0 0;
+    }
+
+    .robotics-site .page-tabs {
+        padding-top: .7rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .robotics-page {
+        font-size: 1.2rem;
+    }
+
+    .robotics-page h2 {
+        font-size: 1.65rem;
+    }
+
+    .robotics-page h3 {
+        font-size: 1.4rem;
+    }
+
+    .robotics-page h4 {
+        font-size: 1.2rem;
+    }
+
+    .robotics-site .hero-heading h1 {
+        font-size: clamp(2rem, 9.8vw, 2.65rem);
+    }
+
+    .robotics-page .evolution-card {
+        padding: 1rem;
+    }
 }

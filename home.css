@@ -121,7 +121,11 @@
     transition: transform .3s, box-shadow .3s, background-color .3s, color .3s;
 }
 .art-buttons a:nth-child(2) { background: var(--brown-4); border-color: var(--line); color: var(--purple-3); }
-.art-buttons a:is(:hover, :focus-visible) { background: var(--purple-1); color: var(--brown-4); transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--soft-purple); }
+.art-buttons a:is(:hover, :focus-visible) { 
+    background: var(--purple-1); 
+    color: var(--brown-4); 
+    transform: translate(-2px, -2px); 
+    box-shadow: 6px 6px 0 var(--soft-purple); }
 
 /* Matching section headers; the title occupies the exact middle column. */
 #showcase, #FAQ { margin-top: 1.25rem; }
@@ -175,8 +179,14 @@
     transition: background-color .2s, transform .2s, box-shadow .2s;
 }
 .panel-heading > a::after { content: "↗"; font-family: system-ui, sans-serif; }
-.panel-heading > a:is(:hover, :focus-visible) { background: var(--purple-1); transform: translateY(-2px); box-shadow: 4px 5px 0 var(--soft-purple); }
-.showcase-container > p { margin: .75rem 1rem 0; }
+.panel-heading > a:is(:hover, :focus-visible) { 
+    background: var(--purple-1); 
+    transform: translateY(-2px); 
+    box-shadow: 4px 5px 0 var(--soft-purple);
+ }
+.showcase-container > p { 
+    margin: .75rem 1rem 0; 
+}
 
 /* Desktop projects scroll horizontally; phone cards keep their natural height. */
 .carousel-wrapper { position: relative; display: flex; align-items: center; gap: .4rem; margin: .75rem .5rem 0; }
@@ -288,7 +298,11 @@
 .project-details[open] summary::after { background-size: 100% 2px, 2px 0; transform: rotate(180deg); }
 .project-details .details-open, .project-details[open] .details-closed { display: none; }
 .project-details[open] .details-open { display: inline; }
-.project-details summary:is(:hover, :focus-visible) { background: var(--periwinkle); box-shadow: 2px 2px 0 var(--soft-purple); }
+.project-details summary:is(:hover, :focus-visible) { 
+    background: var(--periwinkle); 
+    box-shadow: 2px 2px 0 
+    var(--soft-purple); 
+}
 .project-details summary:focus-visible { outline: 3px solid var(--purple-1); outline-offset: 3px; }
 .project-details-content { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; padding: .9rem .6rem .3rem; }
 .project-details-content h4 { margin-bottom: .35rem; color: var(--purple-3); font-size: 1.15rem; text-align: center; }

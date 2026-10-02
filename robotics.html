@@ -3,7 +3,7 @@
 
 <head>
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="robotpage.css?v=hero-header-20260912">
+<link rel="stylesheet" href="robotpage.css?v=structure-20260924">
 
     <meta charset="UTF-8">
     <title>Robotics | LeafLLM</title>
@@ -29,98 +29,103 @@
         </nav>
         </div>
     <main class="robotics-page">
-        <section class="hero" aria-labelledby="robotics-title">
-
-            <div class="hero-content">
-                <p class="placeholder-copy">[Introduce your journey with Team 3598 and what being part of the team means to you.]</p>
+        <section class="overview-panel" aria-labelledby="overview">
+            <h2 class="section-heading" id="overview">Overview</h2>
+            <p class="placeholder-copy">[TODO: introduce your journey with Team 3598]</p>
+            <div class="overview-grid">
+                <div><h3>Robot / project overview</h3><p class="placeholder-copy">[TODO: write robot/project overview]</p></div>
+                <div><h3 id="contribution">My contribution</h3><p class="placeholder-copy">[TODO: write what you personally contributed]</p></div>
             </div>
         </section>
 
+        <section class="page-section" aria-labelledby="team-roles">
+            <h2 class="section-heading" id="team-roles">Roles</h2>
+        <div class="roles-grid">
+            <section class="roles-panel" aria-labelledby="what-i-do">
+                <h3 id="what-i-do">Technical Roles</h3>
+                <ul class="skills-list">
+                    <li>CAD</li>
+                    <li>Programming</li>
+                    <li>Assembly</li>
+                </ul>
+            </section>
+            <section class="roles-panel competition-roles" aria-labelledby="competition-roles">
+                <h3 id="competition-roles">Team/Competition Roles</h3>
+                <ul class="skills-list">
+                    <li>Team Safety Captain</li>
+                    <li>Pit Manager</li>
+                    <li>Robot Presenter</li>
+                </ul>
+            </section>
+        </div>
+            <p class="placeholder-copy section-notes">[TODO: write about your team and competition roles]</p>
         <div class="roles-photos">
             <img class="roles-img" src="images/Robotics/robot-selfie.jpeg" alt="A selfie with the robot" loading="lazy" decoding="async">
             <img class="roles-img" src="images/Robotics/xrp_programming_loop.gif" alt="Programming and testing an XRP robot" loading="lazy" decoding="async">
             <img class="roles-img" src="images/Robotics/WorkingSafetyCaptain.JPG" alt="Working with the team as Safety Captain" loading="lazy" decoding="async">
             <img class="roles-img" src="images/Robotics/team-bus.jpeg" alt="Traveling with the team" loading="lazy" decoding="async">
         </div>
-
-        <div class="intro page-section roles-grid">
-            <section class="roles-panel" aria-labelledby="what-i-do">
-                <h2 id="what-i-do">Roles</h2>
-                <ul class="skills-list">
-                    <li>CAD</li>
-                    <li>Builder</li>
-                    <li>Programming</li>
-                    <li>Team Safety Captain</li>
-                </ul>
-            </section>
-            <section class="roles-panel competition-roles" aria-labelledby="competition-roles">
-                <h2 id="competition-roles">Competition Roles</h2>
-                <ul class="skills-list">
-                    <li>Pit Manager</li>
-                    <li>Robot Presenter</li>
-                </ul>
-            </section>
-        </div>
-
+        </section>
 
         <section class="page-section" aria-labelledby="drivetrain-heading">
             <h2 class="section-heading" id="drivetrain-heading">Spotlight</h2>
             <article class="featured-project" id="drivetrain" aria-labelledby="drivetrain-title">
-                <h2 class="project-title" id="drivetrain-title">Drivetrain</h2>
+                <h3 class="project-title" id="drivetrain-title">Drivetrain</h3>
+                <!-- Optional tags: add/remove li elements with your own wording. -->
+                <ul class="project-tags" aria-label="Project tags"><!-- <li>[TODO: tag]</li> --></ul>
                 <div class="drivetrain-layout">
-                    <img class="project-image featured-image cad-image" src="images/CAD/chassis-render.png" alt="CAD render of the robot chassis" loading="lazy" decoding="async">
+                    <img class="project-image cad-image" src="images/CAD/chassis-render.png" width="1828" height="1148" alt="CAD render of the robot chassis" loading="lazy" decoding="async">
                     <div class="project-details">
-                        <div><h4>The challenge</h4><p class="placeholder-copy">[What did the drivetrain need to do? Add your goals and constraints.]</p></div>
-                        <div><h4>My contribution</h4><p class="placeholder-copy">[Describe your role, the decisions you made, and how you worked with the team.]</p></div>
-                        <div><h4>What I learned</h4><p class="placeholder-copy">[What did testing reveal? Explain what you changed and what you would try next.]</p></div>
+                    <div><h4>Overview</h4><p class="placeholder-copy">[TODO: write drivetrain overview]</p></div>
+                    <div><h4>My contribution</h4><p class="placeholder-copy">[TODO: write your contribution]</p></div>
                     </div>
                 </div>
-                <section class="experience-section" aria-labelledby="experience">
-                    <h3 id="experience">Experience &amp; Lessons</h3>
-                    <div class="experience-content">
-                        <p class="placeholder-copy">[Tell the story of your experience: a challenge you faced, what you learned with the team, and how it changed the way you design.]</p>
-                        <div class="project-details">
-                            <div><h4>What I noticed</h4><p class="placeholder-copy">[What happened when the robot moved from the workbench to testing?]</p></div>
-                            <div><h4>What I learned</h4><p class="placeholder-copy">[Describe the feedback, failures, or discoveries that helped you grow.]</p></div>
-                            <div><h4>How my design changed</h4><p class="placeholder-copy">[Connect those lessons to the design decisions shown below.]</p></div>
-                        </div>
-                        <p class="evolution-bridge">[Explain how these experiences led to the design changes below.]</p>
-                            </div>
-                </section>
+                <div class="project-details">
+                    <div><h4>Design decisions</h4><p class="placeholder-copy">[TODO: write design decisions]</p></div>
+                    <div><h4>Iteration / testing</h4><p class="placeholder-copy">[TODO: write iteration and testing notes]</p></div>
+                </div>
             </article>
         </section>
 
         <section class="page-section design-evolution" aria-labelledby="design-evolution">
             <h2 class="section-heading" id="design-evolution">Design Evolution</h2>
+            <!-- Any number of iterations: duplicate/remove a complete li. Existing titles are editable milestones, not required stages. -->
             <ol class="evolution-grid" role="list">
                 <li class="evolution-card">
-                    <span class="evolution-stage">Version 01</span>
                     <h3>Initial Design</h3>
-                    <!-- Replace each placeholder with an img using class="project-image". -->
-                    <div class="image-placeholder">Initial design image</div>
-                    <p class="placeholder-copy">[Show your first concept and explain the idea behind it.]</p>
-                    <p class="evolution-note"><strong>Starting point:</strong> [What did you want to achieve?]</p>
+                    <!-- Replace with an img class="project-image cad-image" and your own src/alt. -->
+                    <div class="image-placeholder">[TODO: add iteration image/render]</div>
+                    <p class="placeholder-copy">[TODO: write short description]</p>
+                    <!-- Optional: remove either note if it is not useful for this iteration. -->
+                    <p class="evolution-note"><strong>What changed</strong><br>[TODO: write what changed]</p>
+                    <p class="evolution-note"><strong>Why it changed</strong><br>[TODO: write why it changed]</p>
                 </li>
                 <li class="evolution-card">
-                    <span class="evolution-stage">Version 02</span>
                     <h3>Revisions</h3>
-                    <div class="image-placeholder">Revised design image</div>
-                    <p class="placeholder-copy">[Show what changed after testing or getting feedback.]</p>
-                    <p class="evolution-note"><strong>Key change:</strong> [What did you adjust, and why?]</p>
+                    <!-- Replace with an img class="project-image cad-image" and your own src/alt. -->
+                    <div class="image-placeholder">[TODO: add iteration image/render]</div>
+                    <p class="placeholder-copy">[TODO: write short description]</p>
+                    <!-- Optional: remove either note if it is not useful for this iteration. -->
+                    <p class="evolution-note"><strong>What changed</strong><br>[TODO: write what changed]</p>
+                    <p class="evolution-note"><strong>Why it changed</strong><br>[TODO: write why it changed]</p>
                 </li>
                 <li class="evolution-card">
-                    <span class="evolution-stage">Version 03</span>
                     <h3>Refinements</h3>
-                    <div class="image-placeholder">Refined design image</div>
-                    <p class="placeholder-copy">[Show how further testing helped you improve the revised design.]</p>
-                    <p class="evolution-note"><strong>Fine-tuning:</strong> [What still needed work, and how did you improve it?]</p>
+                    <!-- Replace with an img class="project-image cad-image" and your own src/alt. -->
+                    <div class="image-placeholder">[TODO: add iteration image/render]</div>
+                    <p class="placeholder-copy">[TODO: write short description]</p>
+                    <!-- Optional: remove either note if it is not useful for this iteration. -->
+                    <p class="evolution-note"><strong>What changed</strong><br>[TODO: write what changed]</p>
+                    <p class="evolution-note"><strong>Why it changed</strong><br>[TODO: write why it changed]</p>
                 </li>
                 <li class="evolution-card">
-                    <span class="evolution-stage">Version 04</span>
                     <h3>Final Version</h3>
-                    <div class="image-placeholder">Final design image</div>
-                    <p class="placeholder-copy">[Show the finished design and how it compares with your first concept.]</p>
-                    <p class="evolution-note"><strong>Result:</strong> [What improved, and what would you try next?]</p>
+                    <!-- Replace with an img class="project-image cad-image" and your own src/alt. -->
+                    <div class="image-placeholder">[TODO: add iteration image/render]</div>
+                    <p class="placeholder-copy">[TODO: write short description]</p>
+                    <!-- Optional: remove either note if it is not useful for this iteration. -->
+                    <p class="evolution-note"><strong>What changed</strong><br>[TODO: write what changed]</p>
+                    <p class="evolution-note"><strong>Why it changed</strong><br>[TODO: write why it changed]</p>
                 </li>
             </ol>
             <div class="evolution-testing">
@@ -132,35 +137,41 @@
                             <source src="images/Robotics/featured/testing/ball-test.mp4" type="video/mp4">
                             <a href="images/Robotics/featured/testing/ball-test.mp4">Watch ball-handling test</a>
                         </video>
-                        <figcaption><strong>Ball-handling test</strong><span>[Describe the result and what you changed next.]</span></figcaption>
+                        <figcaption><strong>Ball-handling test</strong><span>[TODO: write testing notes]</span></figcaption>
                     </figure>
                     <figure class="video-card">
                         <video controls playsinline preload="none" poster="images/Robotics/featured/testing/trimmed-robotdrive.jpg" aria-label="Driving test">
                             <source src="images/Robotics/featured/testing/trimmed-robotdrive.mp4" type="video/mp4">
                             <a href="images/Robotics/featured/testing/trimmed-robotdrive.mp4">Watch driving test</a>
                         </video>
-                        <figcaption><strong>Driving test</strong><span>[Add what the team tested and what you noticed.]</span></figcaption>
+                        <figcaption><strong>Driving test</strong><span>[TODO: write testing notes]</span></figcaption>
                     </figure>
                     <figure class="video-card">
                         <video controls playsinline preload="none" poster="images/Robotics/featured/testing/robot-intake.jpg" aria-label="Intake test">
                             <source src="images/Robotics/featured/testing/robot-intake.mp4" type="video/mp4">
                             <a href="images/Robotics/featured/testing/robot-intake.mp4">Watch intake test</a>
                         </video>
-                        <figcaption><strong>Intake test</strong><span>[Explain the adjustment and how the robot responded.]</span></figcaption>
+                        <figcaption><strong>Intake test</strong><span>[TODO: write testing notes]</span></figcaption>
                     </figure>
                 </div>
             </div>
         </section>
 
-
-
-        <section class="page-section" aria-labelledby="other-projects">
-            <h2 class="section-heading" id="other-projects">Other Projects</h2>
+        <section class="page-section" aria-labelledby="mechanisms">
+            <h2 class="section-heading" id="mechanisms">Mechanisms</h2>
+            <nav class="project-jump-links" aria-label="Mechanisms">
+                <a href="#turret">Turret</a><a href="#climber">Climber</a><a href="#spindexer">Spindexer</a>
+            </nav>
+            <!-- Copy an article to add a mechanism. Give its id/title id unique values.
+                 All detail blocks, media, and tags are optional; keep only what you need. -->
             <div class="mechanism-projects">
-            <article class="featured-project" id="turret">
-                <p class="project-kicker">01 / Mechanism spotlight</p>
-                <h3>Turret</h3>
-                <p class="project-intro placeholder-copy">[Introduce the turret: what it needed to do, where it fits into the robot, and what you worked on.]</p>
+
+
+            <article class="featured-project" id="turret" aria-labelledby="turret-title">
+                <h3 class="project-title" id="turret-title">Turret</h3>
+                <!-- Optional tags: add/remove li elements with your own wording. -->
+                <ul class="project-tags" aria-label="Project tags"><!-- <li>[TODO: tag]</li> --></ul>
+                <p class="project-intro placeholder-copy">[TODO: write turret overview]</p>
                 <div class="video-grid">
                     <figure class="video-card">
                         <video controls playsinline preload="none" poster="images/Robotics/featured/turret/turret-test.jpg" aria-label="Turret / close-up test">
@@ -178,14 +189,15 @@
                     </figure>
                 </div>
                 <div class="project-details">
-                    <div><h4>The challenge</h4><p class="placeholder-copy">[What range of motion, accuracy, or packaging constraints shaped the turret?]</p></div>
-                    <div><h4>My contribution</h4><p class="placeholder-copy">[Describe your role, the decisions you made, and how you worked with the team.]</p></div>
-                    <div><h4>What I learned</h4><p class="placeholder-copy">[What did testing reveal? Explain what you changed and what you would try next.]</p></div>
+                    <div><h4>My contribution</h4><p class="placeholder-copy">[TODO: write your contribution]</p></div>
+                    <div><h4>Design decisions</h4><p class="placeholder-copy">[TODO: write design decisions]</p></div>
                 </div>
             </article>
-            <article class="featured-project" id="climber">
-                <p class="project-kicker">02 / Mechanism spotlight</p>
-                <h3>Climber</h3>
+
+            <article class="featured-project" id="climber" aria-labelledby="climber-title">
+                <h3 class="project-title" id="climber-title">Climber</h3>
+                <!-- Optional tags: add/remove li elements with your own wording. -->
+                <ul class="project-tags" aria-label="Project tags"><!-- <li>[TODO: tag]</li> --></ul>
                 <figure class="climber-figure">
                     <button class="climber-preview" type="button" aria-pressed="false" aria-label="Show extended climber" aria-describedby="climber-caption">
                         <img class="climber-retracted" src="images/CAD/climber-retracted.png" width="2112" height="1146" alt="CAD render of the climber in its retracted position" loading="lazy" decoding="async">
@@ -194,11 +206,10 @@
                     </button>
                     <figcaption id="climber-caption">Hover to extend. Tap or press Enter to switch views.</figcaption>
                 </figure>
-                <p class="project-intro placeholder-copy">[Introduce the climber and explain how the mechanism moves between its retracted and extended positions.]</p>
+                <p class="project-intro placeholder-copy">[TODO: write climber overview]</p>
                 <div class="project-details">
-                    <div><h4>The challenge</h4><p class="placeholder-copy">[What reach, load, and space requirements did the climber need to meet?]</p></div>
-                    <div><h4>My contribution</h4><p class="placeholder-copy">[Describe your role, the decisions you made, and how you worked with the team.]</p></div>
-                    <div><h4>What I learned</h4><p class="placeholder-copy">[What did testing reveal? Explain what you changed and what you would try next.]</p></div>
+                    <div><h4>My contribution</h4><p class="placeholder-copy">[TODO: write your contribution]</p></div>
+                    <div><h4>Takeaway</h4><p class="placeholder-copy">[TODO: write your takeaway]</p></div>
                 </div>
                 <div class="video-grid single-video">
                     <figure class="video-card">
@@ -208,40 +219,109 @@
                         </video>
                         <figcaption><strong>Climber / robot test</strong><span>The climbing mechanism being tested on the robot.</span></figcaption>
                     </figure>
-                    <div class="test-notes"><h4>From CAD to the robot</h4><p class="placeholder-copy">[Describe what you were checking in this video, what happened, and how the result informed the next iteration.]</p></div>
+                    <div class="test-notes"><h4>From CAD to the robot</h4><p class="placeholder-copy">[TODO: write testing notes]</p></div>
+                </div>
+            </article>
+
+            <article class="featured-project" id="spindexer" aria-labelledby="spindexer-title">
+                <header class="project-heading"><h3 class="project-title" id="spindexer-title">Spindexer</h3><span class="project-status">In Progress</span></header>
+                <!-- Optional tags: add/remove li elements with your own wording. -->
+                <ul class="project-tags" aria-label="Project tags"><!-- <li>[TODO: tag]</li> --></ul>
+                <img class="project-image cad-image" src="images/Robotics/fixed_robot_spindexer.png" alt="Spindexer CAD view" loading="lazy" decoding="async">
+                <div class="project-details">
+                    <div><h4>Original design</h4>
+                        <p class="placeholder-copy">
+                        This subsystem wasn't designed by me originally.
+                        The point of this system was to index balls into our feeder, which would then feed them into our shooter. 
+                        The original design was an omniwheel covered in Cats Tongue, a grippy tape that we use on our intake, and a 3D printed spike that went on top.
+                    </p></div>
+                    <div><h4>My improvements</h4>
+                        <p class="placeholder-copy">
+                            The easiest thing we could do before overhauling the entire subsystem was to change the spindexer shape itself. 
+                            Before, we've tried a rounder shape with flaps, and it was printed using PLA. We also had a version with TPU, which is a soft and flexible material.
+                            These versions weren't very effective, so we went with a more triangular shape.
+                            Our team scouted the various teams at the Northern California District Championship, and we saw that some teams had success with a cone-like spindexer.
+                            09/30/2026 
+                        </p></div>
+                </div>
+                <!-- Optional work log: keep, remove, or add fields independently. -->
+                <details class="work-log">
+                    <summary>Improvement notes</summary>
+                    <div class="project-details">
+                    <div><h4>Testing</h4><p class="placeholder-copy">
+                        We noticed that our robot was shooting better in our test, but we can't guarantee this yet because it was filmed when our intake was broken.
+                    </p></div>
+                    <div><h4>
+                        Next Plans</h4>
+                        <p class="placeholder-copy">
+                         I've been working with our CAD team to improve the exterior of the spindexer design. 
+                         We want to try seeing what a bowl around the spindexer would do, since some of the fuel gets stuck above each other. 
+                         When I was looking through the code, we have a command that agitates the hopper, so pairing this with the shooting might actually help. 
+                        </p></div>
+                    <div class="extranotes"><h4>Extra Notes</h4>
+                        <p class="placeholder-copy">
+                         When testing, we also noticed the turret's cables got caught on some of the balls when we have a full hopper.
+                        </p></div>
+                    </div>
+                </details>
+                <div class="video-grid">
+                    <figure class="video-card">
+                        <video
+                            controls
+                            playsinline
+                            preload="none"
+                            poster="images/Robotics/spindexer-test.jpg"
+                            aria-label="Spindexer testing"
+                        >
+                            <source
+                                src="images/Robotics/spindexer-test.mp4"
+                                type="video/mp4"
+                            >
+                            <a href="images/Robotics/spindexer-test.mp4">
+                                Watch Spindexer testing
+                            </a>
+                        </video>
+
+                        <figcaption>
+                            <strong>Spindexer testing</strong>
+                        </figcaption>
+                    </figure>
                 </div>
             </article>
             </div>
-            <article class="project-row">
-                <div class="image-placeholder">XRP photo</div>
-                <div>
-                    <h3>XRP Robot</h3>
-                    <p class="placeholder-copy">[Describe your XRP project, your contribution, and what you explored.]</p>
-                </div>
+        </section>
+
+        <section class="page-section" aria-labelledby="other-projects">
+            <h2 class="section-heading" id="other-projects">Other Projects</h2>
+            <article class="project-row" id="xrp" aria-labelledby="xrp-title">
+                <img class="project-image" src="images/Robotics/xrp_programming_loop.gif" alt="Programming and testing an XRP robot" loading="lazy" decoding="async">
+                <div><h3 id="xrp-title">XRP Robot</h3><p class="placeholder-copy">[TODO: write project overview and your contribution]</p></div>
             </article>
-            <article class="project-row">
-                <div>
-                    <h3>CAD Project</h3>
-                    <p class="placeholder-copy">[Introduce another CAD project and explain what you designed.]</p>
-                </div>
-                <div class="image-placeholder">CAD photo</div>
+            <article class="project-row" id="cad-project" aria-labelledby="cad-project-title">
+                <div class="image-placeholder">[TODO: add CAD image]</div>
+                <div><h3 id="cad-project-title">CAD Project</h3><p class="placeholder-copy">[TODO: write project overview and your contribution]</p></div>
             </article>
+        </section>
+
+        <section class="page-section reflection" aria-labelledby="experience">
+            <h2 class="section-heading" id="experience">Experience &amp; Lessons</h2>
+            <p class="placeholder-copy">[TODO: write broader reflections and lessons]</p>
         </section>
 
         <section class="page-section beyond-section" aria-labelledby="beyond-the-robot">
             <h2 class="section-heading" id="beyond-the-robot">Beyond the Robot</h2>
             <p class="section-description">The people, memories, and moments that make the team.</p>
+            <p class="placeholder-copy">[TODO: write about team experiences beyond the technical work]</p>
             <!-- Add a photo by copying a figure below. Replace the img src, alt, and figcaption. -->
             <div class="image-grid beyond-grid">
-                <figure><img src="images\Robotics\safetyallstar.jpeg" alt="Safety All Star Award" loading="lazy" decoding="async"><figcaption>Safety All Star Award</figcaption></figure>
-                <figure><img src="images\Robotics\impactaward.jpg" alt="A plush companion with the robot" loading="lazy" decoding="async"><figcaption>Impact Award at Sacramento District Event!!</figcaption></figure>
+                <figure><img src="images/Robotics/safetyallstar.jpeg" alt="Safety All Star Award" loading="lazy" decoding="async"><figcaption>Safety All Star Award</figcaption></figure>
+                <figure><img src="images/Robotics/impactaward.jpg" alt="A plush companion with the robot" loading="lazy" decoding="async"><figcaption>Impact Award at Sacramento District Event!!</figcaption></figure>
                 <figure><img src="images/Robotics/qualityaward.jpeg" alt="Team 3598 gathered at an event" loading="lazy" decoding="async"><figcaption>Quality Award at Half Moon Bay!!</figcaption></figure>
                 <figure><img src="images/Robotics/robot-plush.jpeg" alt="A plush companion with the robot" loading="lazy" decoding="async"><figcaption>most important subsystem</figcaption></figure>
-                <figure><img src="images\Robotics\messedupstands.jpeg" alt="3598 in the stands" loading="lazy" decoding="async"><figcaption>"3598" supposedly</figcaption></figure>
-                <figure><img src="images\Robotics\brokenonfield.jpeg" alt="broken robot" loading="lazy" decoding="async"><figcaption>said "quality award"...</figcaption></figure>
+                <figure><img src="images/Robotics/messedupstands.jpeg" alt="3598 in the stands" loading="lazy" decoding="async"><figcaption>"3598" supposedly</figcaption></figure>
+                <figure><img src="images/Robotics/brokenonfield.jpeg" alt="broken robot" loading="lazy" decoding="async"><figcaption>said "quality award"...</figcaption></figure>
             </div>
         </section>
-
     </main>
         <footer>
             <a class="to-top" href="#top">Back To Top</a>
