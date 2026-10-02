@@ -145,6 +145,10 @@
     margin: 0 0 1.75rem;
 }
 
+.robotics-page .overview-jump-links {
+    margin: 1.5rem 0 0;
+}
+
 .robotics-page .project-jump-links a {
     display: inline-flex;
     align-items: center;
