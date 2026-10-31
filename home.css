@@ -105,7 +105,7 @@
 .right-column { padding: 5px; border: 1px solid var(--purple-1); border-radius: 12px; background: var(--periwinkle); box-shadow: 3px 3px 0 var(--soft-purple); }
 .right-column .leafart { display: block; width: 100%; height: auto; border-radius: 7px; }
 .art-buttons { display: flex; flex-wrap: wrap; align-items: stretch; gap: .6rem; margin-top: .8rem; }
-.art-buttons a {
+.art-buttons .art-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -120,7 +120,8 @@
     text-align: center;
     transition: transform .3s, box-shadow .3s, background-color .3s, color .3s;
 }
-.art-buttons a:nth-child(2) { background: var(--brown-4); border-color: var(--line); color: var(--purple-3); }
+.art-buttons .art-button:nth-child(2) { background: var(--brown-4); border-color: var(--line); color: var(--purple-3); }
+.art-buttons .art-button[aria-disabled="true"] { opacity: .6; cursor: not-allowed; box-shadow: none; }
 .art-buttons a:is(:hover, :focus-visible) { 
     background: var(--purple-1); 
     color: var(--brown-4); 
@@ -305,6 +306,7 @@
 }
 .project-details summary:focus-visible { outline: 3px solid var(--purple-1); outline-offset: 3px; }
 .project-details-content { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; padding: .9rem .6rem .3rem; }
+.project-details-content > div:only-child { grid-column: 1 / -1; width: 100%; max-width: 60ch; justify-self: center; text-align: center; }
 .project-details-content h4 { margin-bottom: .35rem; color: var(--purple-3); font-size: 1.15rem; text-align: center; }
 .home-page .project-details-content p { font-size: 1.1rem; line-height: 1.5; }
 /* Native disclosure semantics remain intact, including keyboard use and hidden links. */
@@ -339,7 +341,8 @@
     text-align: center;
     transition: background-color .3s, color .3s, transform .3s, box-shadow .3s;
 }
-.card .project-link:is(:hover, :focus-visible) { background: var(--purple-1); color: var(--brown-4); transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--purple-3); }
+.card .project-link[aria-disabled="true"] { opacity: .6; cursor: not-allowed; box-shadow: none; }
+.card .project-link:not([aria-disabled="true"]):is(:hover, :focus-visible) { background: var(--purple-1); color: var(--brown-4); transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--purple-3); }
 .card .project-deep-link { display: block; width: fit-content; margin: .4rem auto 0; padding: .2rem; font-size: 1rem; text-align: center; }
 .carousel-btn { flex: 0 0 32px; height: 44px; border: 1px solid var(--line); border-radius: 7px; background: var(--brown-4); color: var(--purple-3); cursor: pointer; transition: transform .2s, background-color .2s, color .2s; }
 .carousel-btn span { font: 1.9rem/1 system-ui, sans-serif; }
